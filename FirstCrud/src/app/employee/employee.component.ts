@@ -22,7 +22,7 @@ export class EmployeeComponent implements OnInit {
       email:[''],
       phone:[''],
       salary:['']
-
+ 
     });
     this.getEmployee();
    }
