@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "firstName": "prashant",
+      "lastName": "deotale",
+      "salary": "2022",
+      "phone": "5467897867",
+      "email": "prashant@gmail.com"
+    },
+    {
+      "id": 3,
+      "firstName": "Rahul",
+      "lastName": "Sharma",
+      "salary": "200003",
+      "phone": "5467897867",
+      "email": "rahul@gmail.com"
+    },
+    {
+      "id": 4,
+      "firstName": "Virdenra ",
+      "lastName": "Sehwag",
+      "salary": "1000000",
+      "phone": "2345678801",
+      "email": "sehwag@gmail.com"
+    },
+    {
+      "id": 5,
+      "firstName": "Priyanka ",
+      "lastName": "chopra12",
+      "salary": "30003",
+      "phone": "55667788",
+      "email": "prynk@gmail.com"
+    },
+    {
+      "id": 6,
+      "firstName": "Shardul",
+      "lastName": "Thakur",
+      "salary": "1000000",
+      "phone": "1234568456",
+      "email": "shardul@com"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
