@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"></div>
+        <div class="card">
+            <div class="text-center">
+                <h3>Login</h3>
+                <h6>Please enter email and password</h6>
+            </div>
+            <form [formGroup]="loginValue">
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email"  formControlName="email"  placeholder="Enter email">
+                    <!--Validations-->
+                    <span *ngIf="loginValue.controls['email'].errors && loginValue.controls['email'].touched || loginValue.controls['email'].dirty">
+                    <span  class="text-danger" *ngIf="loginValue.controls['email'].errors?.['required']">
+                        Email is required.
+                    </span>
+                    </span>
+                  </div>
+                  <div class="mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" formControlName="password"  placeholder="Enter password">
+                    <!--Validations-->
+                    <span *ngIf="loginValue.controls['password'].errors && loginValue.controls['password'].touched || loginValue.controls['password'].dirty">
+                        <span  class="text-danger" *ngIf="loginValue.controls['password'].errors?.['required']">
+                            Password is required.
+                        </span>
+                        </span>
+                  </div>
+                  
+
+
+                  
+            </form>
+            <button type="submit" class="btn btn-primary" [disabled]="!loginValue.valid" (click)="login()">Login</button>
+            <a routerLink="/SignUp">New User ? Click to sign up</a>
+            
+        </div>
+    </div>
+</div>

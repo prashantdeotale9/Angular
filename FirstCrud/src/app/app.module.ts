@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http'
 import { EmployeeServiceService } from './service/employee-service.service';
 import { EmployeeComponent } from './employee/employee.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     
-    EmployeeComponent
+    EmployeeComponent,
+          LoginComponent,
+          SignUpComponent
   ],
   imports: [
     BrowserModule,

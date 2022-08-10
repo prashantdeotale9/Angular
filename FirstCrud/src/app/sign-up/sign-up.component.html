@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"></div>
+        <div class="card">
+            <div class="text-center">
+                <h3>Signup</h3>
+                <h6>Please enter your details</h6>
+            </div>
+            <form [formGroup]="signValue">
+                <div class="mb-3">
+                    <label for="fullName">Full name</label>
+                    <input type="text" class="form-control" id="fullName"  formControlName="fullName" placeholder="Enter full name">
+                     <!--Validations-->
+                     <span *ngIf="signValue.controls['fullName'].errors && signValue.controls['fullName'].touched || signValue.controls['fullName'].dirty">
+                        <span  class="text-danger" *ngIf="signValue.controls['fullName'].errors?.['required']">
+                            Fullname is required.
+                        </span>
+                        </span>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone">Mobile</label>
+                    <input type="phone" class="form-control" id="phone" formControlName="phone"  placeholder="Enter mobile number">
+                    <!--Validations-->
+                    <span *ngIf="signValue.controls['phone'].errors && signValue.controls['phone'].touched || signValue.controls['phone'].dirty">
+                        <span  class="text-danger" *ngIf="signValue.controls['phone'].errors?.['required']">
+                            Mobile number is required.
+                        </span>
+                        </span>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" formControlName="email"  placeholder="Enter email">
+                    
+                     <!--Validations-->
+                    <span *ngIf="signValue.controls['email'].errors && signValue.controls['email'].touched || signValue.controls['email'].dirty">
+                        <span  class="text-danger" *ngIf="signValue.controls['email'].errors?.['required']">
+                            Email is required.
+                        </span>
+                        </span>
+                  </div>
+                  <div class="mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" formControlName="password"  placeholder="Enter password">
+                    <!--Validations-->
+                        <span *ngIf="signValue.controls['password'].errors && signValue.controls['password'].touched || signValue.controls['password'].dirty">
+                        <span  class="text-danger" *ngIf="signValue.controls['password'].errors?.['required']">
+                            Password is required.
+                        </span>
+                        </span>
+                  </div>
+                  
+            </form>
+          <!-- <p>Form value: {{ signValue.value | json }}</p>
+              <p>Form status: {{ signValue.status | json }}</p>  --> 
+            <button type="submit" class="btn btn-primary" [disabled]="!signValue.valid"  (click)="signUPUser()">Signup</button>
+            <a routerLink="/Login">Already register? please login </a>
+            
+        </div>
+    </div>
+</div>

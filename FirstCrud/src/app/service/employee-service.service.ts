@@ -26,4 +26,6 @@ export class EmployeeServiceService {
   {
     return this.http.delete("http://localhost:3000/posts/"+id).pipe();
   }
+
+  
 }
