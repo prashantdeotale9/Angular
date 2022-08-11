@@ -26,10 +26,10 @@ export class SignUpComponent implements OnInit {
   signUPUser(){
     console.log("hello");
     console.log(this.signValue.value.fullName)
-   this.http.post<any>("http://localhost:3000/signupUsers",this.signValue.value).subscribe(res=>{
+   this.http.post<any>("https://localhost:7013/api/User/Signup",this.signValue.value).subscribe(res=>{
         console.log(res);
-        //this.signValue.reset();
-        //this.router.navigate(['Login'])
+        this.signValue.reset();
+        this.router.navigate(['Login'])
 
    });
 

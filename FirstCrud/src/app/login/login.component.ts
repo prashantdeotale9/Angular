@@ -19,15 +19,17 @@ export class LoginComponent implements OnInit {
     });
   }
   login(){
-    this.http.get<any>("http://localhost:3000/signupUsers").subscribe(res=>{
-    const user=  res.find((a:any)=>{
-        a.email=== this.loginValue.value.email && a.password===this.loginValue.value.password;
-
-      });
-      if(user){
+    console.log(this.loginValue.value +" "+this.loginValue.value.email);
+    this.http.post<any>("https://localhost:7013/api/User",this.loginValue.value).subscribe(res=>{
+     console.log(res);
+     
+    /*const user=  res.find((a:any)=>{
+        a.email=== this.loginValue.value.email && a.password===this.loginValue.value.password; */
+        this.loginValue.reset();
         this.router.navigate(['Dashboard'])
-      }
-    });
+      });
+     
+    
 
   }
   get registerFormControl() {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormBuilder}  from '@angular/forms'
+import { Router } from '@angular/router';
 import { EmployeeServiceService } from '../service/employee-service.service';
 import { employeeModel } from './shared/employeeModel';
 
@@ -11,7 +12,7 @@ import { employeeModel } from './shared/employeeModel';
 export class EmployeeComponent implements OnInit {
   formValues !:FormGroup;
   employeeObj:employeeModel=new employeeModel();
-  constructor(private fb:FormBuilder,private service :EmployeeServiceService) { }
+  constructor(private fb:FormBuilder,private service :EmployeeServiceService,private router:Router) { }
 
   
   ngOnInit() 
@@ -108,6 +109,11 @@ openModal()
   onCloseHandled() 
   {
     this.display = "none";
+  }
+  //signout
+  signout(){
+    this.router.navigate(['Login']);
+
   }
 
 }
